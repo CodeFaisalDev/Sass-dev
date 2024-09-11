@@ -10,7 +10,7 @@ export default async function Dashoard() {
   const { userId } = auth();
 
   if (!userId) {
-    return redirect("/");
+    return redirect("/sign-in");
   }
 
   const { completedCources, coursesInProgress } = await GetDashoardCources(
